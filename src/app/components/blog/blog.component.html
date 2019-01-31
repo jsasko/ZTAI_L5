@@ -1,0 +1,7 @@
+<div class="container">
+  <ul style="list-style-type: none;">
+    <li *ngFor="let item of items | filter:filterText:title">
+      <app-blog-item [title]="item.title" [url]="item.url" [id]="item.id"></app-blog-item>
+    </li>
+  </ul>
+</div>

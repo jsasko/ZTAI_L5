@@ -1,0 +1,51 @@
+<div class="container clearfix">
+
+  <hr>
+  <form [formGroup]="form" class="col-4 offset-md-4">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Imię</label>
+      <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1" placeholder="Wprowadź imię">
+      <div *ngIf="name.touched && name.invalid" class="alert alert-danger" required>Niepoprawne imię</div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nazwisko</label>
+      <input type="text" formControlName="lastName" class="form-control" id="exampleInputEmail1" placeholder="Wprowadź nazwisko">
+      <div *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger" required>Niepoprawne nazwisko</div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" placeholder="Wprowadź adres email">
+      <div *ngIf="email.touched && email.invalid" class="alert alert-danger" required>Błędny adres email</div>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">Kobieta</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">Mężczyzna</label>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Opis</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="example-number-input" class="col-form-label">Wiek</label>
+      <input class="form-control" type="number" value="18" id="example-number-input">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Stan cywilny</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option selected>Panna/kawaler</option>
+        <option>Panna</option>
+        <option>Kawaler</option>
+      </select>
+    </div>
+    <button type="reset" class="btn btn-primary">Wyczyść</button>
+    <button type="submit" class="btn btn-primary ml-3">Wyślij</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
